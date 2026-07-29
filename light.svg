@@ -107,26 +107,27 @@
         
         <text y="30"><tspan class="terminal-title">Name</tspan><tspan class="terminal-muted">..................... </tspan><tspan class="terminal-val">Gopi Chand Kuruva</tspan></text>
         <text y="53"><tspan class="terminal-title">Role</tspan><tspan class="terminal-muted">..................... </tspan><tspan class="terminal-primary">Computer Science Student &amp; Full Stack Developer</tspan></text>
-        <text y="76"><tspan class="terminal-title">Education</tspan><tspan class="terminal-muted">................ </tspan><tspan class="terminal-val">NxtWave Institute of Advanced Technologies</tspan></text>
-        <text y="99"><tspan class="terminal-title">Location</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">Andhra Pradesh, India</tspan></text>
+        <text y="76"><tspan class="terminal-title">Education</tspan><tspan class="terminal-muted">................ </tspan><tspan class="terminal-val">BITS Pilani, Hyderabad Campus</tspan></text>
+        <text y="99"><tspan class="terminal-title">Location</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">Hyderabad, India</tspan></text>
         <text y="122"><tspan class="terminal-title">Status</tspan><tspan class="terminal-muted">................... </tspan><tspan class="terminal-val">Building </tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="terminal-val"> Learning </tspan><tspan class="anim-dot terminal-accent">.</tspan><tspan class="anim-dot terminal-accent">.</tspan><tspan class="anim-dot terminal-accent">.</tspan></text>
         
         <text y="168"><tspan class="terminal-accent" font-weight="600">-- TOOLCHAIN --</tspan></text>
         
         <text y="198"><tspan class="terminal-title">Languages</tspan><tspan class="terminal-muted">................ </tspan><tspan class="terminal-val">C++, Python, JavaScript, TypeScript</tspan></text>
-        <text y="221"><tspan class="terminal-title">Frontend</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">HTML, CSS, Tailwind, React, Redux</tspan></text>
-        <text y="244"><tspan class="terminal-title">Backend</tspan><tspan class="terminal-muted">.................. </tspan><tspan class="terminal-val">Node.js, Express.js</tspan></text>
-        <text y="267"><tspan class="terminal-title">Database</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">MongoDB, MySQL</tspan></text>
-        <text y="290"><tspan class="terminal-title">Tools</tspan><tspan class="terminal-muted">.................... </tspan><tspan class="terminal-val">Git, GitHub, VS Code, Postman, Figma, Canva</tspan></text>
-        <text y="313"><tspan class="terminal-title">Cloud</tspan><tspan class="terminal-muted">.................... </tspan><tspan class="terminal-val">Google Cloud (GCP)</tspan></text>
+        <text y="221"><tspan class="terminal-title">Frontend</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">HTML, CSS, Tailwind, React, TypeScript</tspan></text>
+        <text y="244"><tspan class="terminal-title">Backend</tspan><tspan class="terminal-muted">.................. </tspan><tspan class="terminal-val">Node.js, Express.js, NestJS</tspan></text>
+        <text y="267"><tspan class="terminal-title">Database</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-val">MongoDB Atlas, MySQL</tspan></text>
+        <text y="290"><tspan class="terminal-title">Tools</tspan><tspan class="terminal-muted">.................... </tspan><tspan class="terminal-val">n8n, Generative AI, Git, GitHub</tspan></text>
+        <text y="313"><tspan class="terminal-title">Cloud</tspan><tspan class="terminal-muted">.................... </tspan><tspan class="terminal-val">Render, Deployment</tspan></text>
 
         <text y="359"><tspan class="terminal-accent" font-weight="600">-- LINKS --</tspan></text>
         
         <text y="389"><tspan class="terminal-title">GitHub</tspan><tspan class="terminal-muted">................... </tspan><tspan class="terminal-muted">github.com/gopichandkuru</tspan></text>
         <text y="412"><tspan class="terminal-title">LinkedIn</tspan><tspan class="terminal-muted">................. </tspan><tspan class="terminal-muted">linkedin.com/in/gopi-chand-kuru</tspan></text>
-        <text y="435"><tspan class="terminal-title">Twitter</tspan><tspan class="terminal-muted">.................. </tspan><tspan class="terminal-muted">x.com/gopichand55k</tspan></text>
+        <text y="435"><tspan class="terminal-title">Portfolio</tspan><tspan class="terminal-muted">.................. </tspan><tspan class="terminal-muted">gopi-chand-kuruva-x4ve11e.gamma.site</tspan></text>
         <text y="458"><tspan class="terminal-title">Email</tspan><tspan class="terminal-muted">.................... </tspan><tspan class="terminal-muted">gopichand55k@gmail.com</tspan></text>
         
         <text y="515"><tspan class="terminal-accent" font-weight="600">gopichand@portfolio</tspan>:<tspan class="terminal-primary">~</tspan>$ <tspan class="terminal-val blink-cursor">_</tspan></text>
     </g>
 </svg>
+
