@@ -1,9 +1,9 @@
 <div align="center">
   <a href="https://github.com/gopichandkuru">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/dark.svg?v=1">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/light.svg?v=1">
-      <img alt="Gopi Chand Animated Banner" src="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/light.svg?v=1" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/dark.svg?v=2">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/light.svg?v=2">
+      <img alt="Gopi Chand Animated Banner" src="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/light.svg?v=2" width="100%">
     </picture>
   </a>
 </div>
@@ -132,3 +132,4 @@
 <div align="center">
   <p><small>Designed with 💜 and Open Source tools.</small></p>
 </div>
+
