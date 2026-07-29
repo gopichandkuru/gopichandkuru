@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Inter:wght@400;600;700&amp;display=swap');
+            
+            .terminal-text { font-family: 'Fira Code', monospace; font-size: 15px; font-weight: 500; }
+            .terminal-title { font-family: 'Fira Code', monospace; font-size: 15px; font-weight: 600; fill: #10B981; }
+            .terminal-val { fill: #F8FAFC; }
+            .terminal-muted { fill: #94A3B8; }
+            .terminal-accent { fill: #A78BFA; }
+            .terminal-primary { fill: #22D3EE; }
+            
+            @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+            .blink-cursor { animation: blink 1s step-end infinite; }
+
+            .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; }
+            @keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+
+            .slide-in { animation: slideIn 1.5s ease-out forwards; opacity: 0; }
+            @keyframes slideIn { from { opacity: 0; transform: translate(30px, 0); } to { opacity: 1; transform: translate(0, 0); } }
+
+            .floating { animation: floating 6s ease-in-out infinite; }
+            @keyframes floating { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+            
+            .anim-dot { animation: dot-fade 2s infinite; opacity: 0; }
+            .anim-dot:nth-child(2) { animation-delay: 0.2s; }
+            .anim-dot:nth-child(3) { animation-delay: 0.4s; }
+            @keyframes dot-fade { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+            
+            /* Dithered portrait filter effect */
+        </style>
+        
+        <filter id="monochrome-dither">
+            <feColorMatrix type="matrix" values="
+                0.33 0.33 0.33 0 0
+                0.33 0.33 0.33 0 0
+                0.33 0.33 0.33 0 0
+                0    0    0    1 0" result="gray"/>
+            <feComponentTransfer result="high-contrast">
+                <feFuncR type="linear" slope="1.5" intercept="-0.2"/>
+                <feFuncG type="linear" slope="1.5" intercept="-0.2"/>
+                <feFuncB type="linear" slope="1.5" intercept="-0.2"/>
+            </feComponentTransfer>
+            <feColorMatrix type="matrix" values="
+                0.133 0 0 0 0
+                0 0.827 0 0 0
+                0 0 0.933 0 0
+                0 0 0 1 0" />
+        </filter>
+
+        <pattern id="pixelPattern" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+            <rect width="2" height="2" fill="#0A101F" opacity="0.6"/>
+            <rect x="2" y="2" width="2" height="2" fill="#0A101F" opacity="0.6"/>
+        </pattern>
+        
+        <clipPath id="portraitClip">
+            <circle cx="280" cy="305" r="180" />
+        </clipPath>
+        
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+            <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+        </filter>
+        
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="1180" height="610" fill="#0A101F" rx="20"/>
+
+    <!-- Left side background glowing orbs -->
+    <circle cx="280" cy="200" r="220" fill="#22D3EE" opacity="0.08" filter="blur(80px)"/>
+    <circle cx="380" cy="400" r="200" fill="#A78BFA" opacity="0.08" filter="blur(70px)"/>
+
+    <!-- Portrait -->
+    <g class="fade-in floating" transform-origin="280 305">
+        <!-- SVG mask/clip to make it round, then apply filter -->
+        <image x="100" y="125" width="360" height="360" href="https://res.cloudinary.com/dm63iwmi1/image/upload/v1767805626/mee_love_wsgiaw.jpg" clip-path="url(#portraitClip)" filter="url(#monochrome-dither)" preserveAspectRatio="xMidYMid slice" />
+        <!-- Overlay pixel pattern for retro/dithered terminal look -->
+        <circle cx="280" cy="305" r="180" fill="url(#pixelPattern)" clip-path="url(#portraitClip)"/>
+        
+        <!-- Premium UI rings -->
+        <circle cx="280" cy="305" r="183" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.8">
+            <animateTransform attributeName="transform" type="rotate" from="0 280 305" to="360 280 305" dur="40s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="280" cy="305" r="195" fill="none" stroke="#A78BFA" stroke-width="1" stroke-dasharray="15 25" opacity="0.4">
+            <animateTransform attributeName="transform" type="rotate" from="360 280 305" to="0 280 305" dur="60s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- LIVE Badge -->
+        <g transform="translate(140, 430)">
+            <rect width="60" height="24" rx="12" fill="#0A101F" stroke="#1e293b" stroke-width="1"/>
+            <circle cx="14" cy="12" r="4" fill="#ef4444" filter="url(#glow)">
+                <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+            </circle>
+            <text x="24" y="16" font-family="Inter, sans-serif" font-weight="700" font-size="11" fill="#F8FAFC">LIVE</text>
+        </g>
+    </g>
+
+    <!-- Right Side Terminal -->
+    <g class="slide-in" transform="translate(540, 40)">
+        <!-- Glassmorphism Terminal Window -->
+        <rect width="600" height="530" fill="#0D1528" rx="12" stroke="#1e293b" stroke-width="2" filter="url(#shadow)"/>
+        
+        <!-- Terminal Header -->
+        <path d="M0 12 C0 5.373 5.373 0 12 0 L588 0 C594.627 0 600 5.373 600 12 L600 40 L0 40 Z" fill="#1e293b" />
+        <circle cx="24" cy="20" r="6" fill="#ef4444"/>
+        <circle cx="46" cy="20" r="6" fill="#eab308"/>
+        <circle cx="68" cy="20" r="6" fill="#10B981"/>
+        <text x="300" y="25" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" text-anchor="middle" font-weight="600" letter-spacing="0.5">gopichand@portfolio:~</text>
+
+        <!-- Terminal Content -->
+        <g class="terminal-text" transform="translate(30, 80)">
+            <text y="0">
+                <tspan class="terminal-accent" font-weight="600">gopichand@portfolio</tspan>:<tspan class="terminal-primary">~</tspan>$ <tspan class="terminal-val">cat SYSTEM.INFO</tspan>
+            </text>
+            
+            <g transform="translate(0, 40)">
+                <text y="0">
+                    <tspan class="terminal-title">Name</tspan><tspan class="terminal-muted">........</tspan> <tspan class="terminal-val">Gopi Chand Kuruva</tspan>
+                </text>
+                
+                <text y="32">
+                    <tspan class="terminal-title">Role</tspan><tspan class="terminal-muted">........</tspan> <tspan class="terminal-primary">Computer Science Student &amp; Full Stack Developer</tspan>
+                </text>
+                
+                <text y="64">
+                    <tspan class="terminal-title">Education</tspan><tspan class="terminal-muted">...</tspan> <tspan class="terminal-val">NxtWave Institute of Advanced Technologies</tspan>
+                </text>
+                
+                <text y="96">
+                    <tspan class="terminal-title">Location</tspan><tspan class="terminal-muted">....</tspan> <tspan class="terminal-val">Andhra Pradesh, India</tspan>
+                </text>
+                
+                <text y="128">
+                    <tspan class="terminal-title">Status</tspan><tspan class="terminal-muted">......</tspan> <tspan class="terminal-val">Building </tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="anim-dot terminal-primary">.</tspan><tspan class="terminal-val"> Learning </tspan><tspan class="anim-dot terminal-accent">.</tspan><tspan class="anim-dot terminal-accent">.</tspan><tspan class="anim-dot terminal-accent">.</tspan>
+                </text>
+
+                <text y="176">
+                    <tspan class="terminal-accent" font-weight="600">-- TECH STACK --</tspan>
+                </text>
+                
+                <text y="208">
+                    <tspan class="terminal-title">Languages</tspan><tspan class="terminal-muted">...</tspan> <tspan class="terminal-val">C++, Python, JavaScript, TypeScript</tspan>
+                </text>
+                
+                <text y="240">
+                    <tspan class="terminal-title">Frontend</tspan><tspan class="terminal-muted">....</tspan> <tspan class="terminal-val">HTML, CSS, Tailwind, React, Redux</tspan>
+                </text>
+                
+                <text y="272">
+                    <tspan class="terminal-title">Backend</tspan><tspan class="terminal-muted">.....</tspan> <tspan class="terminal-val">Node.js, Express.js</tspan>
+                </text>
+                
+                <text y="304">
+                    <tspan class="terminal-title">Database</tspan><tspan class="terminal-muted">....</tspan> <tspan class="terminal-val">MongoDB, MySQL</tspan>
+                </text>
+
+                <text y="352">
+                    <tspan class="terminal-accent" font-weight="600">-- LINKS --</tspan>
+                </text>
+                
+                <text y="384">
+                    <tspan class="terminal-title">GitHub</tspan><tspan class="terminal-muted">......</tspan> <tspan class="terminal-muted">github.com/gopichandkuru</tspan>
+                </text>
+                <text y="416">
+                    <tspan class="terminal-title">LinkedIn</tspan><tspan class="terminal-muted">....</tspan> <tspan class="terminal-muted">linkedin.com/in/gopi-chand-kuru</tspan>
+                </text>
+                <text y="448">
+                    <tspan class="terminal-title">Email</tspan><tspan class="terminal-muted">.......</tspan> <tspan class="terminal-muted">gopichand55k@gmail.com</tspan>
+                </text>
+                
+                <text y="496">
+                    <tspan class="terminal-accent" font-weight="600">gopichand@portfolio</tspan>:<tspan class="terminal-primary">~</tspan>$ <tspan class="terminal-val blink-cursor">_</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
