@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <a href="https://github.com/gopichandkuru">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gopichandkuru/gopichandkuru/main/dark.svg?v=3">
@@ -49,19 +49,26 @@
 <br/>
 <br/>
 <div align="center">
-  <h3>?? Featured Projects</h3>
-  <a href="https://github.com/gopichandkuru/syncspace">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gopichandkuru&repo=syncspace&theme=tokyonight&bg_color=0A101F&border_color=1e293b&title_color=22D3EE&text_color=94A3B8&icon_color=A78BFA" alt="SyncSpace" width="48%" />
-  </a>
-  <a href="https://github.com/gopichandkuru/roadside-rescue">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gopichandkuru&repo=roadside-rescue&theme=tokyonight&bg_color=0A101F&border_color=1e293b&title_color=22D3EE&text_color=94A3B8&icon_color=A78BFA" alt="RoadSide Rescue" width="48%" />
-  </a>
+  <h3>🚀 Featured Live Projects</h3>
   <br/>
-  <a href="https://github.com/gopichandkuru/dream-decor">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gopichandkuru&repo=dream-decor&theme=tokyonight&bg_color=0A101F&border_color=1e293b&title_color=22D3EE&text_color=94A3B8&icon_color=A78BFA" alt="Dream Decor" width="48%" />
+  <a href="https://syncspace-frontend-05u3.onrender.com/">
+    <img src="https://img.shields.io/badge/SyncSpace-22D3EE?style=for-the-badge&logo=react&logoColor=white" alt="SyncSpace"/>
   </a>
-  <a href="https://github.com/gopichandkuru/token-generator">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gopichandkuru&repo=token-generator&theme=tokyonight&bg_color=0A101F&border_color=1e293b&title_color=22D3EE&text_color=94A3B8&icon_color=A78BFA" alt="Token Generator" width="48%" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://roadsiderescue.base44.app/reportbreakdown">
+    <img src="https://img.shields.io/badge/Roadside_Rescue-10B981?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Roadside Rescue"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://tokengenerator-frontend.onrender.com/">
+    <img src="https://img.shields.io/badge/Token_Generator-A78BFA?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Token Generator"/>
+  </a>
+  <br/><br/>
+  <a href="https://dream-1-w30n.onrender.com/">
+    <img src="https://img.shields.io/badge/Dream_Decor-ef4444?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Dream Decor"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://play-nest-mu.vercel.app/">
+    <img src="https://img.shields.io/badge/Play_Nest-eab308?style=for-the-badge&logo=vercel&logoColor=white" alt="Play Nest"/>
   </a>
 </div>
 
