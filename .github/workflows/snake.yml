@@ -19,7 +19,7 @@ jobs:
     permissions: 
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     
     steps:
       # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
@@ -31,9 +31,16 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
           
+      # fetch streak stats without hitting GitHub Camo's 4-second timeout
+      - name: fetch github streak stats
+        run: |
+          (curl -sSL --max-time 300 --retry 3 "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&theme=tokyonight&background=0A101F&border=1e293b&stroke=1e293b&ring=22D3EE&fire=ef4444&currStreakLabel=22D3EE" -o dist/streak-dark.svg || true) &
+          (curl -sSL --max-time 300 --retry 3 "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&theme=default&background=FFFFFF&border=e2e8f0&stroke=0891B2&ring=7C3AED&fire=059669&currStreakLabel=0891B2" -o dist/streak-light.svg || true) &
+          wait
+
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push github-contribution-grid-snake.svg to the output branch
+      - name: push dist to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
